@@ -8,8 +8,7 @@ import Alert from './components/Alert';
 import {
   BrowserRouter,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 function App() {
@@ -44,7 +43,7 @@ const toggleMode =()=>{
 }
   
   return (
-    <BrowserRouter>
+     <BrowserRouter>
     <>
       <Navbar title= "TextUtility"  mode={mode} toggleMode={toggleMode}/>
       <Alert alert={alert}/>
@@ -55,7 +54,7 @@ const toggleMode =()=>{
                   <About/>
               </Route>
                 
-              <Route exact  path="/">
+         <Route exact  path="/">
                   <TextBox defValue = " Enter the text below for Analyzation!" mode={mode} showAlert={showAlert} />   
               </Route>
            </Switch>
